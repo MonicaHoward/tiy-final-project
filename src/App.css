@@ -23,6 +23,7 @@
   to { transform: rotate(360deg); }
 }
 /*MY CUSTOM CSS*/
+/*HEADER STUFF GOES RIGHT HERE*/
 header {
   border: 1px solid #DDDDDD;
   line-height: 1;
@@ -30,9 +31,10 @@ header {
 header h1, p {
   margin: 10px;
 }
-
+/*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {
   border: 1px solid #DDDDDD;
+  float: left;
   height: 600px;
   width: 15%;
 }
@@ -44,6 +46,25 @@ header h1, p {
 }
 .side-bar h3:hover {
   border: 5px solid #DDDDDD;
+}
+/*SHARED DUEL QUERY STUFF GOES RIGHT HERE*/
+.duel-query {
+  border: 1px solid #DDDDDD;
+  float: left;
+  height: 600px;
+  width: 40%;
+}
+.main-content {
+  
+}
 
-
+/*FOOTER STUFF HERE*/
+footer {
+  border: 1px solid #DDDDDD;
+  clear: both;
+  height: 120px;
+  font-style: italic;
+  line-height: 5;
+  width: 100%;
+  text-align: right;
 }
