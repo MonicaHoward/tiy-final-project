@@ -22,3 +22,26 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/*MY CUSTOM CSS*/
+header {
+  border: 1px solid #DDDDDD;
+  line-height: 1;
+}
+header h1, p {
+  margin: 10px;
+}
+
+.side-bar {
+  border: 1px solid #DDDDDD;
+  height: 600px;
+  width: 15%;
+}
+.side-bar h3 {
+  border: 1px solid #DDDDDD;
+  line-height: 5;
+  margin: 0 auto;
+  text-align: center;
+}
+.side-bar h3:hover {
+  border: 5px solid #DDDDDD;
+}
