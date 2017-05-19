@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 
 
@@ -8,6 +9,7 @@ class MovieSearch extends React.Component {
       <section>
         <input type="text" />
         <ol>
+
         </ol>
       </section>
     );
