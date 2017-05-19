@@ -56,10 +56,17 @@ header h1, p {
   width: 42%;
 }
 .main-content {
- border: 1px solid #DDDDDD;
- display: inline-block;
- height: 200px;
- width: 80%;
+  border: 1px solid #DDDDDD;
+  display: inline-block;
+  height: 200px;
+  margin: 100px auto;
+  width: 80%;
+}
+.main-content input {
+  line-height: 2;
+  margin: 40px;
+  width: 80%;
+
 }
 
 /*FOOTER STUFF HERE*/

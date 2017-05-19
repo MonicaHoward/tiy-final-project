@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from  'react-router';
+
 // COMPONENTS
 import Header from './Header.js';
 import Sidebar from './Sidebar.js';
@@ -15,7 +17,6 @@ class App extends Component {
       <div>
         <Header />
         <Sidebar />
-        <MovieSearch />
         <LeftQuery />
         <RightQuery />
         <MovieSearch />
