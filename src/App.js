@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import SearchQuery from './MovieSearch';
 
 // COMPONENTS
 import Header from './Header.js';
