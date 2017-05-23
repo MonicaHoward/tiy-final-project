@@ -60,13 +60,26 @@ header h1, p {
   display: inline-block;
   height: 200px;
   margin: 100px auto;
+  text-align: center;
   width: 80%;
 }
 .main-content input {
   line-height: 2;
   margin: 40px;
   width: 80%;
-
+}
+.basic-search-section {
+  border: 10px solid black;
+  float: right;
+  margin: 0 auto;
+  text-align: center;
+  width: 84%;
+}
+.basic-search {
+  display: inline-block;
+  line-height: 2;
+  margin: 40px;
+  width: 40%
 }
 
 /*FOOTER STUFF HERE*/

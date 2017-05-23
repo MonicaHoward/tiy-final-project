@@ -37,7 +37,7 @@ class MovieSearch extends React.Component {
 
 
 handleChange() {
-    
+
 }
 
 
@@ -45,10 +45,12 @@ handleChange() {
 
   render() {
     return (
-      <section>
-        <input type="text" onChange={(evt) => this.handleChange()}></input>
+      <section className="basic-search-section">
+      
+        <input type="text" className="basic-search" onChange={(evt) => this.handleChange()}></input>
         <ol>
         </ol>
+
       </section>
     );
   }
