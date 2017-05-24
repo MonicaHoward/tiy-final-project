@@ -71,6 +71,7 @@ header h1, p {
 .basic-search-section {
   border: 10px solid black;
   float: right;
+  height: 600px;
   margin: 0 auto;
   text-align: center;
   width: 84%;

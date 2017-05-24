@@ -15,16 +15,7 @@ class MovieSearch extends React.Component {
   }
 
   componentDidMount() {
-    $.ajax({
-      url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query= + searchQuery`
 
-    })
-    .done((data) => {
-      this.setState({
-        allMovieData: data.results
-      })
-      console.log("whooooooo",data);
-    });
   }
 
 
@@ -38,19 +29,29 @@ handleChange(evt) {
 handleKeyUp(evt) {
   if (evt.keyCode === 13) {
 
-    const specificData = [];
-    for (var i = 0; i < this.state.specificMovieData.length; i++) {
-      let movie = this.state.specificMovieData[i]
-      if (movie.results.indexOf(this.state.searchQuery) > 1) {
-        specificData.push(movie);
-      }
-    }
-    this.setState({
-      searchQuery: '',
-      specificMovieData: specificData
+    $.ajax({
+      url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query= + searchQuery`
 
+    })
+    .done((data) => {
+      this.setState({
+        allMovieData: data.results
+      })
+      console.log("whooooooo",data);
     });
-    console.log('what is this?', specificData);
+    // const specificData = [];
+    // for (var i = 0; i < this.state.allMovieData.length; i++) {
+    //   let movie = this.state.allMovieData[i]
+    //   if (movie.results.indexOf(this.state.searchQuery) > 1) {
+    //     specificData.push(movie);
+    //   }
+    // }
+    // this.setState({
+    //   searchQuery: '',
+    //   specificMovieData: specificData
+    //
+    // });
+
   }
 }
 
@@ -58,12 +59,14 @@ handleKeyUp(evt) {
 
 
   render() {
-    let list;
-    if (this.state.specificMovieData.length > 0) {
-      list = this.state.specificMovieData.map((movie) => {
+    console.log('whats my data???????', this.state.allMovieData[0])
+    let displayThis;
+    if (this.state.allMovieData.length > 0) {
+      console.log('here');
+      displayThis = this.state.allMovieData.map((movie) => {
         return (
-          <ul>
-            <li>{movie.poster}</li>
+          <ul key={movie.id}>
+            <li>{movie.poster_path}</li>
             <li>{movie.title}</li>
             <li>{movie.vote_average}</li>
           </ul>
@@ -73,13 +76,14 @@ handleKeyUp(evt) {
     return (
       <section className="basic-search-section">
         <input type="text" className="basic-search"
+          placeholder="enter movie title here"
           onChange={(evt) => this.handleChange(evt)}
           onKeyUp={(evt) => this.handleKeyUp(evt)}
           value={this.state.searchQuery}/>
 
-        <ul>
-          {list}
-        </ul>
+
+          {displayThis}
+
       </section>
     );
   }
