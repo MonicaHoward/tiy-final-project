@@ -16,14 +16,17 @@ class MovieSearch extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=goodfellas +searchQuery`
+      url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query= + searchQuery`
+
     })
     .done((data) => {
       this.setState({
         allMovieData: data.results
       })
+      console.log("whooooooo",data);
     });
   }
+
 
 
 handleChange(evt) {
@@ -47,6 +50,7 @@ handleKeyUp(evt) {
       specificMovieData: specificData
 
     });
+    console.log('what is this?', specificData);
   }
 }
 
