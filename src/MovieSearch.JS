@@ -55,9 +55,9 @@ class MovieSearch extends React.Component {
       displayThis = this.state.allMovieData.map((movie) => {
         return (
           <ul key={movie.id}>
-            <li><img src=`https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${movie.poster_path}` /></li>
+            <li><img src={'https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${movie.id.poster_path}'} /></li>
             <li>{movie.title}</li>
-            <li>Movie Rating:{movie.vote_average}</li>
+            <li>Movie Rating: {movie.vote_average}</li>
           </ul>
         )
       });
