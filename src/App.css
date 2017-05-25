@@ -126,8 +126,7 @@ header h1, p {
   width: 84%;
 }
 ul {
-	border: 1px gray solid;
-}
+ }
 ul:hover {
 	background-color: black;
 	color: white;
