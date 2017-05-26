@@ -116,7 +116,7 @@ input {
 	background-color: #ffffff;
   /*border: 10px solid #DDDDDD;*/
   float: left;
-  height: 400px;
+  height: 300px;
   margin: 20px;
   text-align: center;
   width: 42%;
@@ -124,9 +124,9 @@ input {
 .movie-poster {
 	border: 1px solid orange;
 	float: left;
-	height: 200px;
+	height: 100px;
 	margin: 15px;
-	width:200px;
+	width:100px;
 }
 
 /*JUMBOTRON STUFF GOES RIGHT HERE*/
@@ -139,7 +139,7 @@ input {
 .side-bar {
 	background-color: #6B717E;
   float: left;
-  height: 600px;
+  height: 700px;
   width: 13%;
 }
 .side-bar h3, .side-bar:link {
@@ -153,9 +153,9 @@ input {
 }
 /*SHARED DUEL QUERY STUFF GOES RIGHT HERE*/
 .duel-query {
-	background-color: #AAAAAA;
+	background-color: #FFFFFF;
   float: left;
-  height: 600px;
+  height: 700px;
   text-align: center;
   width: 43%;
 }
@@ -166,7 +166,7 @@ input {
 	width: 100%;
 }
 .main-content {
-	background-color: #ffffff;
+	background-color: #F1F3F4;
   /*border: 10px solid #DDDDDD;*/
   display: inline-block;
   height: 400px;
@@ -174,10 +174,20 @@ input {
   text-align: center;
   width: 80%;
 }
-
+.lets-duel {
+	background-color: yellow;
+	border: 1px solid #DDDDDD;
+	border-radius: 50px;
+	color: #C60D0D;
+	font-family: 'Oleo Script', cursive;
+	font-size: 2em;
+	height: 50px;
+	line-height: 1.5;
+	width: 200px;
+}
 .movie-randomizer {
-	background-color: #AAAAAA;
-	height: 600px;
+	background-color: #F1F3F4;
+	height: 700px;
 	text-align: center;
 	line-height: 3;
 	margin: 0 auto;
@@ -193,9 +203,9 @@ input {
   width: 80%;
 }
 .basic-search-section {
-	background-color: #AAAAAA;
+	background-color: #F1F3F4;
   float: left;
-  height: 600px;
+  height: 700px;
 	line-height: 2;
   margin: 0 auto;
   text-align: center;
@@ -216,6 +226,7 @@ ul:hover {
 
 /*FOOTER STUFF HERE*/
 footer {
+	background-color: #E21B1B;
   border: 1px solid #DDDDDD;
   clear: both;
   height: 50px;

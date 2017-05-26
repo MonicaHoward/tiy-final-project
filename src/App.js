@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // COMPONENTS
 
 import MovieSearch from './MovieSearch.js';
-import LeftQuery from './LeftQuery.js'
+import TheLeftQuery from './TheLeftQuery.js'
 import RightQuery from './RightQuery.js';
 import MovieRandomizer from './MovieRandomizer.js'
 import Footer from './Footer.js';
@@ -33,7 +33,7 @@ class App extends Component {
 
           <Route path="/movie-search" exact component={MovieSearch} />
           <Route path="/movie-search" exact component={ MovieSearch } />
-          <Route path="/movie-duel" component={LeftQuery } />
+          <Route path="/movie-duel" component={TheLeftQuery } />
           <Route path="/movie-duel" component={ RightQuery} />
 
 

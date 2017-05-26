@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 
 
-class RightQuery extends React.Component {
+class TheLeftQuery extends React.Component {
 
   constructor() {
     super();
@@ -33,19 +33,16 @@ class RightQuery extends React.Component {
         this.setState({
           allMovieData: data.results
         })
-        console.log("we got action?",data);
+        console.log("YES O ",data);
       });
     }
-
-
-
   }
 
 
 
 
   render() {
-    console.log('right query results', this.state.allMovieData[0])
+    console.log('left query results', this.state.allMovieData[0])
     let displayThis;
     if (this.state.allMovieData.length > 0) {
       console.log('here');
@@ -79,12 +76,9 @@ class RightQuery extends React.Component {
             value={this.state.searchQuery}/>
             {displayThis}
         </div>
-        <div className="lets-duel">
-          <h1>Let's Duel</h1>
-        </div>
       </section>
     );
   }
 
 }
-export default RightQuery;
+export default TheLeftQuery;
