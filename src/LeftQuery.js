@@ -2,6 +2,13 @@ import React from 'react';
 
 class LeftQuery extends React.Component {
 
+
+
+
+
+
+
+
   render() {
     return (
       <section className="duel-query">

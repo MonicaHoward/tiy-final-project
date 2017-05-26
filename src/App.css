@@ -100,10 +100,35 @@ header p {
 	font-size: 1.5em;
 	margin: 10px;
 }
+/*THE EXTRAS GOES HERE*/
 input {
 	border: solid black;
 	border-radius: 6px;
+	overflow: auto;
 }
+.box-header {
+	background-color: #DDDDDD;
+	height: 30px;
+	text-align: center;
+	width: 100%;
+}
+.search-results {
+	background-color: #ffffff;
+  /*border: 10px solid #DDDDDD;*/
+  float: left;
+  height: 400px;
+  margin: 20px;
+  text-align: center;
+  width: 42%;
+}
+.movie-poster {
+	border: 1px solid orange;
+	float: left;
+	height: 200px;
+	margin: 15px;
+	width:200px;
+}
+
 /*JUMBOTRON STUFF GOES RIGHT HERE*/
 /*.jumbo-tron {
 	background-color: #E21B1B;
@@ -149,6 +174,18 @@ input {
   text-align: center;
   width: 80%;
 }
+
+.movie-randomizer {
+	background-color: #AAAAAA;
+	height: 600px;
+	text-align: center;
+	line-height: 3;
+	margin: 0 auto;
+}
+
+
+
+
 .main-content input {
 
   line-height: 2;
@@ -156,8 +193,8 @@ input {
   width: 80%;
 }
 .basic-search-section {
-  border: 1px solid black;
-  float: right;
+	background-color: #AAAAAA;
+  float: left;
   height: 600px;
 	line-height: 2;
   margin: 0 auto;
