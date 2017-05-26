@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 // COMPONENTS
 import Header from './Header.js';
@@ -12,15 +14,19 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return  (
-      <div>
-        <Header />
-        <Sidebar />
-        <LeftQuery />
-        <RightQuery />
-        <MovieSearch />
-        <Footer />
-      </div>
+    return (
+      <Router>
+        <div>
+        <Route path="/" component={ Header } />
+        <Route path="/" component={Sidebar} />
+        <Route path="/movie-search" component={ MovieSearch } />
+
+          <LeftQuery />
+          <RightQuery />
+        
+          <Footer />
+          </div>
+      </Router>
     );
   }
 }
