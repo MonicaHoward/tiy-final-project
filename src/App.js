@@ -19,14 +19,13 @@ class App extends Component {
       <Router>
         <div>
           <Route path="/" component={ Header } />
-
           <Route path="/" component={ Sidebar } />
-          <Route path="/movie-duel" exact component={ LeftQuery } />
-          <Route path="/movie-duel" exact component={ RightQuery } />
-          <RightQuery />
+
           <Route path="/movie-search" exact component={ MovieSearch } />
+          <LeftQuery />
+          <RightQuery />
           <Route path="/" component={ Footer } />
-          </div>
+        </div>
       </Router>
     );
   }

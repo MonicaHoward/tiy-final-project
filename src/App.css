@@ -84,8 +84,10 @@ header {
   border: 1px solid #C60D0D;
 	background-color: #C60D0D;
   line-height: 1;
+	overflow: auto;
 }
 header h1 {
+	float: left;
 	font-family: 'Oleo Script', cursive;
 	font-size: 2em;
   margin: 10px;
@@ -93,6 +95,7 @@ header h1 {
 
 header p {
 	color: #DDDDDD;
+	float: right;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 1.5em;
 	margin: 10px;
@@ -110,10 +113,9 @@ input {
 /*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {
 	background-color: #6B717E;
-
   float: left;
   height: 600px;
-  width: 15%;
+  width: 13%;
 }
 .side-bar h3, .side-bar:link {
   color: #D5DFE5;
@@ -130,7 +132,7 @@ input {
   float: left;
   height: 600px;
   text-align: center;
-  width: 42%;
+  width: 43%;
 }
 .box-header {
 	background-color: #DDDDDD;
@@ -142,7 +144,7 @@ input {
 	background-color: #ffffff;
   /*border: 10px solid #DDDDDD;*/
   display: inline-block;
-  height: 200px;
+  height: 400px;
   margin: 100px auto;
   text-align: center;
   width: 80%;

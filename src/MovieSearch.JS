@@ -19,7 +19,6 @@ class MovieSearch extends React.Component {
   }
 
 
-
   handleChange(evt) {
     this.setState({
       searchQuery: evt.target.value
