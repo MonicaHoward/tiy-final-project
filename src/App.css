@@ -73,21 +73,28 @@ table {
 /*MY CUSTOM CSS*/
 /*HEADER STUFF GOES RIGHT HERE*/
 header {
-  border: 1px solid #DDDDDD;
+  border: 1px solid #C60D0D;
+	background-color: #C60D0D;
   line-height: 1;
 }
 header h1, p {
   margin: 10px;
 }
+input {
+	border: solid white;
+	border-radius: 6px;
+}
+
 /*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {
-  border: 1px solid #DDDDDD;
+	background-color: #494343;
+  border: 1px solid #2B2727;
   float: left;
   height: 600px;
   width: 15%;
 }
 .side-bar h3 {
-  border: 1px solid #DDDDDD;
+  border: 1px solid #2B2727;
   line-height: 5;
   margin: 0 auto;
   text-align: center;
@@ -97,13 +104,15 @@ header h1, p {
 }
 /*SHARED DUEL QUERY STUFF GOES RIGHT HERE*/
 .duel-query {
-  border: 1px solid #DDDDDD;
+	background-color: #E21B1B;
+
   float: left;
   height: 600px;
   text-align: center;
   width: 42%;
 }
 .main-content {
+	background-color: ##D5DFE5;
   border: 1px solid #DDDDDD;
   display: inline-block;
   height: 200px;
@@ -112,12 +121,13 @@ header h1, p {
   width: 80%;
 }
 .main-content input {
+
   line-height: 2;
   margin: 40px;
   width: 80%;
 }
 .basic-search-section {
-  border: 10px solid black;
+  border: 1px solid black;
   float: right;
   height: 600px;
 	line-height: 2;

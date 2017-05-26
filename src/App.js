@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, } from 'react-router-dom';
 
 
 // COMPONENTS
@@ -17,14 +17,15 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Route path="/" component={ Header } />
-        <Route path="/" component={Sidebar} />
-        <Route path="/movie-search" component={ MovieSearch } />
-
-          <LeftQuery />
+          <Route path="/" component={ Header } />
+          <Route path="/" component={ Sidebar } />
+          <Route path="/movie-duel" exact component={ LeftQuery } />
+          <Route path="/movie-duel" exact component={ RightQuery } />
           <RightQuery />
-        
-          <Footer />
+          <Route path="/movie-search" exact component={ MovieSearch } />
+          <Route path="/" component={ Footer } />
+
+
           </div>
       </Router>
     );
