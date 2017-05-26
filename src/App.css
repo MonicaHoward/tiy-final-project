@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script|Quicksand');
+
 /*CSS RESET*/
 
 html, body, div, span, applet, object, iframe,
@@ -71,30 +73,50 @@ table {
   to { transform: rotate(360deg); }
 }
 /*MY CUSTOM CSS*/
+a:link, a:visited {
+	color: #D5DFE5;
+	text-decoration: none;
+
+}
 /*HEADER STUFF GOES RIGHT HERE*/
 header {
-  /*border: 1px solid #C60D0D;
-	background-color: #C60D0D;*/
+	color: white;
+  border: 1px solid #C60D0D;
+	background-color: #C60D0D;
   line-height: 1;
 }
-header h1, p {
+header h1 {
+	font-family: 'Oleo Script', cursive;
+	font-size: 2em;
   margin: 10px;
+}
+
+header p {
+	color: #DDDDDD;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5em;
+	margin: 10px;
 }
 input {
 	border: solid black;
 	border-radius: 6px;
 }
-
+/*JUMBOTRON STUFF GOES RIGHT HERE*/
+/*.jumbo-tron {
+	background-color: #E21B1B;
+	height: 300px;
+	width: 100%;
+}*/
 /*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {
-	/*background-color: #494343;
-  border: 1px solid #2B2727;*/
+	background-color: #6B717E;
+
   float: left;
   height: 600px;
   width: 15%;
 }
-.side-bar h3 {
-  /*border: 1px solid #2B2727;*/
+.side-bar h3, .side-bar:link {
+  color: #D5DFE5;
   line-height: 5;
   margin: 0 auto;
   text-align: center;
@@ -104,16 +126,21 @@ input {
 }
 /*SHARED DUEL QUERY STUFF GOES RIGHT HERE*/
 .duel-query {
-	/*background-color: #E21B1B;*/
-
+	background-color: #AAAAAA;
   float: left;
   height: 600px;
   text-align: center;
   width: 42%;
 }
+.box-header {
+	background-color: #DDDDDD;
+	height: 30px;
+	text-align: center;
+	width: 100%;
+}
 .main-content {
-	background-color: ##D5DFE5;
-  border: 1px solid #DDDDDD;
+	background-color: #ffffff;
+  /*border: 10px solid #DDDDDD;*/
   display: inline-block;
   height: 200px;
   margin: 100px auto;
@@ -152,7 +179,7 @@ ul:hover {
 footer {
   border: 1px solid #DDDDDD;
   clear: both;
-  height: 120px;
+  height: 50px;
   font-style: italic;
   line-height: 5;
   width: 100%;

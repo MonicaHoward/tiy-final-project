@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, } from 'react-router-dom';
 
 // COMPONENTS
 import Header from './Header.js';
+
 import Sidebar from './Sidebar.js';
 import MovieSearch from './MovieSearch.js';
 import LeftQuery from './LeftQuery.js'
@@ -18,14 +19,13 @@ class App extends Component {
       <Router>
         <div>
           <Route path="/" component={ Header } />
+
           <Route path="/" component={ Sidebar } />
           <Route path="/movie-duel" exact component={ LeftQuery } />
           <Route path="/movie-duel" exact component={ RightQuery } />
           <RightQuery />
           <Route path="/movie-search" exact component={ MovieSearch } />
           <Route path="/" component={ Footer } />
-
-
           </div>
       </Router>
     );

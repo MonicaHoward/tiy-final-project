@@ -6,7 +6,10 @@ class LeftQuery extends React.Component {
     return (
       <section className="duel-query">
         <div className="main-content">
-          <input type="text" className="search-query"/>
+          <div className="box-header">
+            <h1>whats here</h1>
+          </div>
+            <input type="text" placeholder="Movie Title" className="search-query"/>
         </div>
       </section>
     );
