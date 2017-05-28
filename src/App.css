@@ -113,12 +113,16 @@ input {
   text-align: center;
   width: 42%;
 }
+.movie-title {
+	font-size: 2em;
+	font-weight: bold;
+}
 .movie-poster {
 	border: 1px solid orange;
 	float: left;
 	height: 100px;
 	margin: 15px;
-	width:100px;
+	width:33%;
 }
 
 /*JUMBOTRON STUFF GOES RIGHT HERE*/

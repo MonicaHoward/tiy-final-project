@@ -43,9 +43,6 @@ class MovieSearch extends React.Component {
     }
   }
 
-
-
-
   render() {
     console.log('whats my data???????', this.state.allMovieData[0])
     let displayThis;
@@ -58,7 +55,7 @@ class MovieSearch extends React.Component {
             <div className="box-header">
             </div>
             <li className="movie-poster"><img src={'https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${movie.id.poster_path'} alt={"movie.title"} /></li>
-            <li>{movie.title}</li>
+            <li className="movie-title">{movie.title}</li>
             <li>Movie Rating: {movie.vote_average}</li>
             <li>Synopsis: {movie.overview}</li>
           </ul>
@@ -78,9 +75,6 @@ class MovieSearch extends React.Component {
       </section>
     );
   }
-
-
-
 
 // poster_url:
 // `https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${this.state.poster_path}`
