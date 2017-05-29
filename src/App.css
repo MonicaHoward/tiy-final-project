@@ -96,6 +96,7 @@ header p {
 input {
 	border: solid black;
 	border-radius: 6px;
+	float: none;
 	overflow: auto;
 }
 .box-header {
@@ -195,16 +196,18 @@ input {
 .main-content input {
 
   line-height: 2;
-  margin: 40px;
+  margin: 0 auto;
+	text-align: center;
+
   width: 80%;
 }
 .basic-search-section {
 	background-color: #F1F3F4;
-  float: left;
+
   height: 700px;
 	line-height: 2;
   margin: 0 auto;
-  text-align: center;
+	text-align: center;
   width: 84%;
 }
 ul {

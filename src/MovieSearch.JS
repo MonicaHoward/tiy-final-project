@@ -65,12 +65,17 @@ class MovieSearch extends React.Component {
     }
     return (
       <section className="basic-search-section">
-        <input type="text" className="basic-search"
-          placeholder="enter movie title here"
-          onChange={(evt) => this.handleChange(evt)}
-          onKeyUp={(evt) => this.handleKeyUp(evt)}
-          value={this.state.searchQuery}/>
+        <div>
+          <input type="text" className="basic-search"
+            placeholder="enter movie title here"
+            onChange={(evt) => this.handleChange(evt)}
+            onKeyUp={(evt) => this.handleKeyUp(evt)}
+            value={this.state.searchQuery}/>
+        </div>
+        <div>
           {displayThis}
+        </div>
+
 
       </section>
     );
