@@ -62,7 +62,7 @@ class MovieSearch extends React.Component {
               <li className="movie-title">{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
 
-              <li>Synopsis: {movie.overview.split('.')}</li>
+              <li>Synopsis: {movie.overview.split('.', 1)}</li>
             </div>
 
           </ul>

@@ -13,6 +13,9 @@ class MovieRandomizer extends React.Component {
       movieId: Math.ceil(Math.random() * 300)
     }
   }
+  randomizer() {
+    
+  }
 
   handleClick(evt) {
       $.ajax({
@@ -39,7 +42,7 @@ class MovieRandomizer extends React.Component {
     });
     return (
       <section className="movie-randomizer">
-        <button onClick={(evt) => this.handleClick(evt)}>PUSH FOR RANDOM MOVIE</button>
+        <button onClick={(evt) => this.randomizer(evt)}>PUSH FOR RANDOM MOVIE</button>
         <h1>-OR-< br />CHOOSE A GENRE</h1>
         <button>ACTION</button>
         <button>COMEDY</button>
