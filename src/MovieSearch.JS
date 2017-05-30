@@ -9,15 +9,9 @@ class MovieSearch extends React.Component {
     super();
     this.state = {
       allMovieData: [],
-      specificMovieData: [],
       searchQuery: ''
     }
   }
-
-  componentDidMount() {
-
-  }
-
 
   handleChange(evt) {
     this.setState({
@@ -27,12 +21,8 @@ class MovieSearch extends React.Component {
 
   handleKeyUp(evt) {
     if (evt.keyCode === 13) {
-
       $.ajax({
-
         url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
-
-
       })
       .done((data) => {
         this.setState({
