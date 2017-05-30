@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-
+const url = `https://image.tmdb.org/t/p/w500`;
 
 class TheLeftQuery extends React.Component {
 
@@ -13,7 +13,6 @@ class TheLeftQuery extends React.Component {
       searchQuery: ''
     }
   }
-
   handleChange(evt) {
     this.setState({
       searchQuery: evt.target.value
@@ -52,7 +51,7 @@ class TheLeftQuery extends React.Component {
             <ul className="duel-search-results" key={movie.id}>
               <div className="box-header">
               </div>
-              <li className="movie-poster"><img src={'https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${movie.id.poster_path'} alt={"movie.title"} /></li>
+              <li className="movie-poster"><img src={`${url}${movie.poster_path}`} alt={"movie.title"} /></li>
               <li>{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
               <li>Synopsis: {movie.overview}</li>

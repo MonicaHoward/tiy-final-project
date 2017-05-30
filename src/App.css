@@ -119,11 +119,18 @@ input {
 	font-weight: bold;
 }
 .movie-poster {
-	border: 1px solid orange;
 	float: left;
 	height: 100px;
 	margin: 15px;
-	width:33%;
+	width:10px;
+}
+.movie-poster img {
+	height: 200px;
+}
+.movie-info li{
+	float: right;
+	margin-right: 30px;
+	width: 300px;
 }
 
 /*JUMBOTRON STUFF GOES RIGHT HERE*/
@@ -156,6 +163,9 @@ input {
   text-align: center;
   width: 43%;
 }
+.duel-search-results {
+	margin: 20px;
+}
 .box-header {
 	background-color: #DDDDDD;
 	height: 30px;
@@ -166,10 +176,17 @@ input {
 	background-color: #F1F3F4;
   /*border: 10px solid #DDDDDD;*/
   display: inline-block;
-  height: 400px;
+  height: 100px;
   margin: 100px auto;
   text-align: center;
   width: 80%;
+}
+.movie-duel {
+	margin: 0 auto;
+	position: fixed;
+	top: 300px;
+	left: 700px;
+	text-align: center;
 }
 .lets-duel {
 	background-color: yellow;
@@ -180,6 +197,8 @@ input {
 	font-size: 2em;
 	height: 50px;
 	line-height: 1.5;
+	margin: 0 auto;
+	text-align: center;
 	width: 200px;
 }
 .movie-randomizer {
@@ -189,21 +208,14 @@ input {
 	line-height: 3;
 	margin: 0 auto;
 }
-
-
-
-
 .main-content input {
-
   line-height: 2;
-  margin: 0 auto;
+  margin: 10px auto;
 	text-align: center;
-
   width: 80%;
 }
 .basic-search-section {
 	background-color: #F1F3F4;
-
   height: 700px;
 	line-height: 2;
   margin: 0 auto;

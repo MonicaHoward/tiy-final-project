@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-
+const url = `https://image.tmdb.org/t/p/w500`;
 
 class RightQuery extends React.Component {
 
@@ -50,18 +50,27 @@ class RightQuery extends React.Component {
       console.log('here');
       displayThis = this.state.allMovieData.map((movie) => {
         return (
-          <div className="duel-query">
-            <ul className="duel-search-results" key={movie.id}>
-              <div className="box-header">
-              </div>
-              <li className="movie-poster"><img src={'https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${movie.id.poster_path'} alt={"movie.title"} /></li>
-              <li>{movie.title}</li>
+          <ul className="search-results" key={movie.id}>
+            <div className="box-header">
+              <h3>OPPONENT #1</h3>
+            </div>
+
+            <div className="movie-poster">
+              <ul>
+              <li><img src={`${url}${movie.poster_path}`} alt={movie.title} /></li>
+              </ul>
+            </div>
+
+            <div className="movie-info">
+              <li className="movie-title">{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
               <li>Synopsis: {movie.overview}</li>
-            </ul>
+            </div>
+
+          </ul>
 
 
-          </div>
+
 
         )
       });
@@ -78,9 +87,7 @@ class RightQuery extends React.Component {
             value={this.state.searchQuery}/>
             {displayThis}
         </div>
-        <div className="lets-duel">
-          <h1>Let's Duel</h1>
-        </div>
+      
       </section>
     );
   }
