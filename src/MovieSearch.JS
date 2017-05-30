@@ -44,14 +44,10 @@ class MovieSearch extends React.Component {
   }
 
   render() {
-    console.log('whats my data???????', this.state.allMovieData)
     let displayThis;
     if (this.state.allMovieData.length > 0) {
-
       displayThis = this.state.allMovieData.map((movie) => {
-        console.log(`${url}${movie.poster_path}`);
         return (
-
           <ul className="search-results" key={movie.id}>
             <div className="box-header">
             </div>
@@ -65,7 +61,8 @@ class MovieSearch extends React.Component {
             <div className="movie-info">
               <li className="movie-title">{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
-              <li>Synopsis: {movie.overview}</li>
+
+              <li>Synopsis: {movie.overview.split('.')}</li>
             </div>
 
           </ul>
