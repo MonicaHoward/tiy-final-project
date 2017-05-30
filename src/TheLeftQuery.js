@@ -54,7 +54,7 @@ class TheLeftQuery extends React.Component {
               <li className="duel-movie-poster"><img src={`${url}${movie.poster_path}`} alt={"movie.title"} /></li>
               <li className="movie-title">{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
-              <li>Synopsis: {movie.overview}</li>
+              <li>Synopsis: {movie.overview.split('.', 1)}</li>
             </ul>
 
 
