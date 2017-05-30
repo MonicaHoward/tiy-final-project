@@ -50,24 +50,18 @@ class RightQuery extends React.Component {
       console.log('here');
       displayThis = this.state.allMovieData.map((movie) => {
         return (
-          <ul className="search-results" key={movie.id}>
-            <div className="box-header">
-              <h3>OPPONENT #1</h3>
-            </div>
-
-            <div className="movie-poster">
-              <ul>
-              <li><img src={`${url}${movie.poster_path}`} alt={movie.title} /></li>
-              </ul>
-            </div>
-
-            <div className="movie-info">
+          <div className="duel-query">
+            <ul className="duel-search-results" key={movie.id}>
+              <div className="box-header">
+              </div>
+              <li className="duel-movie-poster"><img src={`${url}${movie.poster_path}`} alt={"movie.title"} /></li>
               <li className="movie-title">{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
               <li>Synopsis: {movie.overview}</li>
-            </div>
+            </ul>
 
-          </ul>
+
+          </div>
 
 
 
@@ -87,7 +81,7 @@ class RightQuery extends React.Component {
             value={this.state.searchQuery}/>
             {displayThis}
         </div>
-      
+
       </section>
     );
   }
