@@ -2,6 +2,35 @@ import React from 'react';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 
+function MoviePreview(props) {
+  return (
+    <div>
+      <div className="column">
+        <img
+          className="movie_poster"
+          src={props.movie_poster}
+          alt={props.movieTitle}
+        />
+      <h2 className="movieTitle">@{props.movieTitle}
+      </h2>
+      </div>
+      <button>
+        className='reset'
+        onClick={props.onReset.bind(null, props.id)}
+      >
+        Reset
+      </button>
+    </div>
+  )
+}
+
+MoviePreview.propTypes= {
+  movie_poster: PropTypes.string.isRequired,
+  movieTitle: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequred
+
+}
 class MovieInput extends React.Component {
 
   constructor(props) {
