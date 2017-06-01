@@ -5,10 +5,27 @@ import PropTypes from 'prop-types';
 class MovieInput extends React.Component {
 
   constructor(props) {
-    super();
+    super(props);
     this.setState = {
       movieTitle: ""
     }
+    this.handleChange=this.handleChange.bind(this);
+    this.handleSubmit=this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    var value=event.target.value;
+    this.setState(function() {
+      return {
+        movieTitle: value
+      }
+    })
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.onSubmit(
+      this.props.id,
+      this.props.movieTitle
+    )
   }
   render() {
     return(
@@ -26,7 +43,6 @@ MovieInput.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onSubmit: PropTypes.string.isRequired
-
 }
 
 class MovieDuel extends React.Component {
