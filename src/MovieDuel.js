@@ -98,6 +98,8 @@ class MovieDuel extends React.Component {
   render() {
     var movieOneTitle=this.state.playerOneTitle;
     var movieTwoTitle=this.state.playerOneName;
+    var movieOneImage=this.state.movieOneImage;
+    var movieTwoImage=this.state.movieTwoImage;
     return (
 
       <div>
@@ -109,7 +111,12 @@ class MovieDuel extends React.Component {
             onSubmit={this.handleSubmit}
           />}
         </div>
-
+        {!movieOneImage !== null &&
+          <MoviePreview
+            movie_poster={movieOneImage}
+            movieTitle={movieOneTitle}
+            onReset={this.handleReset()}
+          />}
         <div className="duel-section>">
           {!movieTwoTitle &&
           <MovieInput
