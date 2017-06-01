@@ -29,14 +29,11 @@ class App extends Component {
             <Link to="/movie-search"><h3>MOVIE SEARCH</h3></Link>
           </nav>
 
-
-
-
           <Route path="/movie-search" exact component={MovieSearch} />
           <Route path="/movie-search" exact component={ MovieSearch } />
           <Route path="/movie-duel" component={TheLeftQuery } />
           <Route path="/movie-duel" component={ RightQuery} />
-          <Route path="/movie-duel" component={MovieDuel} />
+          <Route path="/movie-duel-2" component={MovieDuel} />
 
 
           <Route path="/movie-randomizer" component={MovieRandomizer}></Route>
