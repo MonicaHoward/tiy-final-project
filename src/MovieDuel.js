@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'react-router-dom';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 
@@ -54,14 +55,26 @@ class MovieInput extends React.Component {
     this.props.onSubmit(
       this.props.id,
       this.props.movieTitle
-    )
+    );
   }
   render() {
     return(
       <div>
-        <form>
-          <label></label>
-          <input></input>
+        <form className ="column"
+          onSubmit={this.handleSubmit}>
+          <label className='header'
+            htmlFor='movieTitle'>
+            {this.props.label}
+          </label>
+          <input
+            id="movieTitle"
+            placeholer="type here"
+            type='text'
+            value={this.state}
+            autoComplete='off'
+            onChange={this.handleChange}
+
+        />
         </form>
         <button></button>
       </div>
@@ -95,11 +108,20 @@ class MovieDuel extends React.Component {
     })
   }
 
+  handleReset(id) {
+    this.setState(function () {
+      var newState = {};
+      newState[id + 'Name'] = '';
+      newState[id + 'Image'] = null;
+      return newState;
+})
+}
   render() {
     var movieOneTitle=this.state.playerOneTitle;
     var movieTwoTitle=this.state.playerOneName;
     var movieOneImage=this.state.movieOneImage;
     var movieTwoImage=this.state.movieTwoImage;
+    var match = this.props.match;
     return (
 
       <div>
@@ -110,7 +132,15 @@ class MovieDuel extends React.Component {
             label="Movie One"
             onSubmit={this.handleSubmit}
           />}
-          
+          {movieOneImage !== null &&
+          <MoviePreview
+            movie_poster={movieOneImage}
+            movieTitle={movieOneTitle}
+            onReset={this.handleReset}
+            id='movieOne'
+            />}
+
+
         </div>
 
         <div className="duel-section>">
@@ -120,7 +150,25 @@ class MovieDuel extends React.Component {
             label="Movie Two"
             onSubmit={this.handleSubmit}
           />}
+          {movieTwoImage !== null &&
+         <MoviePreview
+           movie_poster={movieTwoImage}
+           movieTitle={movieTwoTitle}
+           onReset={this.handleReset}
+           id='movieTwo'
+           />}
+
         </div>
+
+        {movieOneImage && movieTwoImage &&
+          <Link
+            className='button'
+            to={{
+              pathname: match.url + '/results',
+              search: '?movieOneTitle=' + movieOneTitle + '&pmovieTwoTitle=' + movieTwoTitle
+            }}>
+              Lets Duel
+</Link>}
 
       </div>
     )
@@ -128,3 +176,20 @@ class MovieDuel extends React.Component {
 }
 
 export default MovieDuel;
+
+
+// {movieOneImage !== null &&
+// <MoviePreview
+//   movie_poster={movieOneImage}
+//   movieTitle={movieOneTitle}
+//   onReset={this.handleReset}
+//   id='movieOne'
+//   />}
+
+// {movieTwoImage !== null &&
+// <MoviePreview
+//   movie_poster={movieTwoImage}
+//   movieTitle={movieTwoTitle}
+//   onReset={this.handleReset}
+//   id='movieTwo'
+//   />}
