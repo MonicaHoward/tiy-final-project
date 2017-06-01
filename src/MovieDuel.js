@@ -110,13 +110,9 @@ class MovieDuel extends React.Component {
             label="Movie One"
             onSubmit={this.handleSubmit}
           />}
+          
         </div>
-        {!movieOneImage !== null &&
-          <MoviePreview
-            movie_poster={movieOneImage}
-            movieTitle={movieOneTitle}
-            onReset={this.handleReset()}
-          />}
+
         <div className="duel-section>">
           {!movieTwoTitle &&
           <MovieInput
@@ -125,6 +121,7 @@ class MovieDuel extends React.Component {
             onSubmit={this.handleSubmit}
           />}
         </div>
+
       </div>
     )
   }
