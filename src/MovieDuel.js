@@ -3,6 +3,8 @@ import Link from 'react-router-dom';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 
+const url = `https://image.tmdb.org/t/p/w500`
+
 function MoviePreview(props) {
   return (
     <div>
@@ -12,10 +14,10 @@ function MoviePreview(props) {
           src={props.movie_poster}
           alt={props.movieTitle}
         />
-      <h2 className="movieTitle">@{props.movieTitle}
+      <h2 className="movieTitle">{props.movieTitle}
       </h2>
       </div>
-      <button>
+      <button
         className='reset'
         onClick={props.onReset.bind(null, props.id)}
       >
@@ -37,6 +39,7 @@ class MovieInput extends React.Component {
   constructor(props) {
     super(props);
     this.setState = {
+      allMovie
       movieTitle: ""
     }
     this.handleChange=this.handleChange.bind(this);
@@ -57,10 +60,27 @@ class MovieInput extends React.Component {
       this.props.movieTitle
     );
   }
+  handleKeyUp(evt) {
+    if (evt.keyCode === 13) {
+
+      $.ajax({
+
+        url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.movieTitle}`,
+
+
+      })
+      .done((data) => {
+        this.setState({
+          allMovieData: data.results
+        })
+        console.log("YES O ",data);
+      });
+    }
+  }
   render() {
     return(
       <div>
-        <form className ="column"
+        <form className="column"
           onSubmit={this.handleSubmit}>
           <label className='header'
             htmlFor='movieTitle'>
@@ -168,7 +188,7 @@ class MovieDuel extends React.Component {
               search: '?movieOneTitle=' + movieOneTitle + '&pmovieTwoTitle=' + movieTwoTitle
             }}>
               Lets Duel
-</Link>}
+            </Link>}
 
       </div>
     )
