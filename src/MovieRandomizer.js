@@ -1,23 +1,18 @@
 import React from 'react';
 import $ from 'jquery';
 
-
-
 class MovieRandomizer extends React.Component {
-
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      allMovieData: [],
-      randomMovie: [],
-      movieId: ''
-    }
+      selectedGenre: 'Any'
+    };
+    this.updateGenre = this.updateGenre.bind(this);
   }
-  randomizer() {
+  updateGenre(genre) {
     this.setState ({
-      randomMovie: Math.ceil(Math.random() * 9000)
-
-    })
+      selectedGenre: genre
+    });
 
   }
 
@@ -36,23 +31,24 @@ class MovieRandomizer extends React.Component {
 
 
   render() {
-    console.log("random?", this.state)
-    let displayRandom = this.state.allMovieData.map((movie) => {
-      return (
-        <div>
-          {displayRandom}
-        </div>
-      )
-    });
+    var genres = ['All', 'Action', 'Comedy', 'Horror'];
+
     return (
-      <section className="movie-randomizer">
-        <button onClick={(evt) => this.randomizer(evt)}>PUSH FOR RANDOM MOVIE</button>
-        <h1>-OR-< br />CHOOSE A GENRE</h1>
-        <button>ACTION</button>
-        <button>COMEDY</button>
-        <button>HORROR</button>
-      </section>
+      <ul className='genres'>
+        {genres.map(function(genre) {
+          return (
+            <li
+              key={genre}
+              onclick={this.updateGenre.bind(null, genre)}
+              style={genre === this.state.selectedGenre ? {color: '#D00213'} :null}>
+              <button>{genre}</button>
+            </li>
+          )
+        }, this)}
+
+      </ul>
     )
+
   }
 }
 
