@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-
 // COMPONENTS
 
 import MovieSearch from './MovieSearch.js';
@@ -26,7 +25,7 @@ class App extends Component {
 
           <nav className="side-bar">
             <Link to="/movie-duel-new"><h3>MOVIE DUEL 2.0</h3></Link>
-            <Link to="/movie-randomizer"><h3>MOVIE RANDOMIZER</h3></Link>
+
             <Link to="/movie-search"><h3>MOVIE SEARCH</h3></Link>
           </nav>
 
@@ -35,8 +34,10 @@ class App extends Component {
           <Route path="/movie-duel-new" component={movieduel} />
 
 
-          <Route path="/movie-randomizer" component={MovieRandomizer}></Route>
+
+        
           <Route path="/" component={ Footer } />
+
         </div>
       </Router>
     );
