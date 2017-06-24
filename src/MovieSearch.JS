@@ -41,22 +41,13 @@ class MovieSearch extends React.Component {
           <ul className="search-results" key={movie.id}>
             <div className="box-header">
             </div>
-
-            <div className="movie-poster">
-              <ul>
-              <li><img src={`${url}${movie.poster_path}`} alt={movie.title} /></li>
-              </ul>
-            </div>
-
+            <li className="movie-poster"><img src={`${url}${movie.poster_path}`} alt={movie.title} /></li>
             <div className="movie-info">
               <li className="movie-title">{movie.title}</li>
               <li>Movie Rating: {movie.vote_average}</li>
-
               <li>Synopsis: {movie.overview.split('.', 1)}</li>
             </div>
-
           </ul>
-
         )
       });
     }

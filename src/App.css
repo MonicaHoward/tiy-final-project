@@ -133,12 +133,6 @@ input {
 	width: 300px;
 }
 
-/*JUMBOTRON STUFF GOES RIGHT HERE*/
-/*.jumbo-tron {
-	background-color: #E21B1B;
-	height: 300px;
-	width: 100%;
-}*/
 /*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {
 	background-color: #6B717E;
@@ -251,4 +245,12 @@ footer {
   line-height: 5;
   width: 100%;
   text-align: right;
+}
+
+
+
+.movie-duel-search {
+
+	float: left;
+	width: 43%;
 }
