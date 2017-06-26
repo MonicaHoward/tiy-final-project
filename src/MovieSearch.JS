@@ -1,14 +1,13 @@
 import React from 'react';
-import $ from 'jquery';
+
 
 const url = `https://image.tmdb.org/t/p/w500`;
 
 class MovieSearch extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      allMovieData: [],
       searchQuery: ''
     }
   }
@@ -19,45 +18,33 @@ class MovieSearch extends React.Component {
     })
   }
 
-  handleKeyUp(evt) {
-    if (evt.keyCode === 13) {
-      $.ajax({
-        url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
-      })
-      .done((data) => {
-        this.setState({
-          allMovieData: data.results
-        })
-        console.log("whooooooo",data);
-      });
-    }
-  }
 
   render() {
     let displayThis;
-    if (this.state.allMovieData.length > 0) {
-      displayThis = this.state.allMovieData.map((movie) => {
+    if (this.props.allMovieData.length > 0) {
+      displayThis = this.props.allMovieData.map((movie) => {
         return (
-          <ul className="search-results" key={movie.id}>
+          <ul className="search-results" key={this.propsmovie.id}>
             <div className="box-header">
             </div>
-            <li className="movie-poster"><img src={`${url}${movie.poster_path}`} alt={movie.title} /></li>
+            <li className="movie-poster"><img src={`${url}${this.props.movie.poster_path}`} alt={this.propsmovie.title} /></li>
             <div className="movie-info">
-              <li className="movie-title">{movie.title}</li>
-              <li>Movie Rating: {movie.vote_average}</li>
-              <li>Synopsis: {movie.overview.split('.', 1)}</li>
+              <li className="movie-title">{this.props.movie.title}</li>
+              <li>Movie Rating: {this.props.movie.vote_average}</li>
+              <li>Synopsis: {this.props.movie.overview.split('.', 1)}</li>
             </div>
           </ul>
         )
       });
     }
+
     return (
       <section className="basic-search-section">
         <div>
           <input type="text" className="basic-search"
             placeholder="enter movie title here"
-            onChange={(evt) => this.handleChange(evt)}
-            onKeyUp={(evt) => this.handleKeyUp(evt)}
+            onChange={(evt) => this.props.handleChange(evt)}
+            onKeyUp={(evt) => this.props.handleKeyUp(evt)}
             value={this.state.searchQuery}/>
         </div>
         <div>
@@ -68,30 +55,18 @@ class MovieSearch extends React.Component {
       </section>
     );
   }
-
-// poster_url:
-// `https://api.themoviedb.org/3/configuration?api_key=dec457859cd32502859fced3c3ca8ede${this.state.poster_path}`
-
-
-  // searchQuery() {
-  //   const url = `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query`;
-  //   console.log('whats this?', url);
-  //
-  //   $.ajax({
-  //     url: url
-  //   })
-  //
-  //   .done((data) => {
-  //     console.log(data);
-  //     movieData = data.results.map((movie) => {
-  //       return {
-  //         moviePoster: movie.url,
-  //         movieName: movie.name,
-  //         movieRating: movie.vote_average
-  //       }
-  //     });
-  //   })
-  // }
-
 }
 export default MovieSearch;
+// handleKeyUp(evt) {
+//   if (evt.keyCode === 13) {
+//     $.ajax({
+//       url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
+//     })
+//     .done((data) => {
+//       this.setState({
+//         allMovieData: data.results
+//       })
+//       console.log("whooooooo",data);
+//     });
+//   }
+// }

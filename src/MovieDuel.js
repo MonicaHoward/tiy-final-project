@@ -13,8 +13,14 @@ class MovieDuel extends React.Component {
   constructor() {
     super();
     this.state = {
-      allMovieData: []
+      allMovieData: [],
+      searchQuery: ''
     }
+  }
+  handleChange(evt) {
+    this.setState({
+      searchQuery: evt.target.value
+    })
   }
 
   handleKeyUp(evt) {
@@ -32,6 +38,7 @@ class MovieDuel extends React.Component {
   }
 
   render() {
+
 
     return (
       <div>
