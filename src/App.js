@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
 // COMPONENTS
-
 import MovieSearch from './MovieSearch.js';
 import MovieDuel from './MovieDuel.js'
-import MovieRandomizer from './MovieRandomizer.js'
 import Footer from './Footer.js';
 // CSS & EXTRAS
 import './App.css';
