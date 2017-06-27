@@ -2,13 +2,6 @@ import React from 'react';
 import MovieSearch from './MovieSearch.js';
 import $ from 'jquery';
 
-
-
-
-
-
-
-
 class MovieDuel extends React.Component {
   constructor() {
     super();

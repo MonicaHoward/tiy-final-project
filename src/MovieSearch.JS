@@ -1,21 +1,13 @@
 import React from 'react';
 
-
 const url = `https://image.tmdb.org/t/p/w500`;
 
-class MovieSearch extends React.Component {
 
+class MovieSearch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      searchQuery: ''
-    }
-  }
+    
 
-  handleChange(evt) {
-    this.setState({
-      searchQuery: evt.target.value
-    })
   }
 
 
@@ -57,16 +49,3 @@ class MovieSearch extends React.Component {
   }
 }
 export default MovieSearch;
-// handleKeyUp(evt) {
-//   if (evt.keyCode === 13) {
-//     $.ajax({
-//       url: `https://api.themoviedb.org/3/search/movie?api_key=dec457859cd32502859fced3c3ca8ede&query=${this.state.searchQuery}`,
-//     })
-//     .done((data) => {
-//       this.setState({
-//         allMovieData: data.results
-//       })
-//       console.log("whooooooo",data);
-//     });
-//   }
-// }
