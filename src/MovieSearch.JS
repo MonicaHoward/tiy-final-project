@@ -2,7 +2,6 @@ import React from 'react';
 
 
 
-
 class MovieSearch extends React.Component {
   constructor(props) {
     super(props);
