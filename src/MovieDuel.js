@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieSearch from './MovieSearch.js';
+
 import $ from 'jquery';
 
 const url = `https://image.tmdb.org/t/p/w500`;
@@ -39,7 +39,7 @@ class MovieDuel extends React.Component {
     if (this.state.allMovieData.length > 0) {
 
       displayThis = this.state.allMovieData[0]
-        
+
         return (
 
           <ul className="duel-container"
