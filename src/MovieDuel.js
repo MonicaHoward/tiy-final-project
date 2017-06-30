@@ -12,6 +12,8 @@ class MovieDuel extends React.Component {
       searchQuery: ''
     }
   }
+
+
   handleChange(evt) {
     this.setState({
       searchQuery: evt.target.value
@@ -35,33 +37,45 @@ class MovieDuel extends React.Component {
   render() {
     let displayThis;
     if (this.state.allMovieData.length > 0) {
-      displayThis = this.state.allMovieData.map((movie) => {
+
+      displayThis = this.state.allMovieData[0]
+        console.log(`${url}${displayThis.poster_path}`);
         return (
-          <ul className="search-results" key={this.state.smovie.id}>
-            <div className="box-header">
+
+          <ul className="duel-container"
+              key={displayThis.id}>
+
+            <div className="duel-movie-poster">
+              <ul>
+              <li><img src={`${url}${displayThis.poster_path}`} alt={displayThis.title} /></li>
+              </ul>
             </div>
-            <li className="movie-poster"><img src={`${url}${this.state.movie.poster_path}`} alt={this.this.state.movie.title} /></li>
-            <div className="movie-info">
-              <li className="movie-title">{this.state.movie.title}</li>
-              <li>Movie Rating: {this.state.movie.vote_average}</li>
-              <li>Synopsis: {this.state.movie.overview.split('.', 1)}</li>
+
+            <div className="duel-movie-info">
+              <li className="duel-movie-title">{displayThis.title}</li>
+              <li className="score"
+                  >score <br /> {displayThis.vote_average}</li>
             </div>
+
           </ul>
+
         )
-      });
+
     }
 
     return (
       <div>
-        <div className="movie-duel-search">
-          <MovieSearch
-          />
+        <div>
+          <input type="text" className="basic-search"
+            placeholder="enter movie title here"
+            onChange={(evt) => this.handleChange(evt)}
+            onKeyUp={(evt) => this.handleKeyUp(evt)}
+            value={this.state.searchQuery}/>
+        </div>
+        <div>
           {displayThis}
         </div>
 
-        <div className="movie-duel-search">
-          <MovieSearch />
-        </div>
 
       </div>
     )

@@ -126,7 +126,7 @@ input {
 	width:10px;
 }
 .movie-info {
-	/*border: 2px solid orange;*/
+
 	float: right;
 
 	margin-right: 50px;
@@ -135,6 +135,7 @@ input {
 }
 .rating {
 	border: 1px solid gray;
+	border-radius: 3px;
 }
 .movie-poster img {
 	height: 200px;
@@ -145,16 +146,18 @@ input {
 	width: 300px;
 	font-size: 1em;
 }*/
-
+.basic-search-section {
+	float: left;
+}
 /*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {
-	background-color: #6B717E;
+
   float: left;
-  height: 700px;
+
   width: 13%;
 }
 .side-bar h3, .side-bar:link {
-  color: #D5DFE5;
+  color: black;
   line-height: 5;
   margin: 0 auto;
   text-align: center;
@@ -163,16 +166,14 @@ input {
   border: 5px solid #DDDDDD;
 }
 /*SHARED DUEL QUERY STUFF GOES RIGHT HERE*/
-.duel-query {
+/*.duel-query {
 	background-color: #FFFFFF;
   float: left;
   height: 400px;
   text-align: center;
-  width: 43%;
-}
-.duel-search-results {
-	margin: 20px;
-}
+  width: 43%;}*/
+
+
 .box-header {
 	background-color: #DDDDDD;
 	height: 30px;
@@ -188,13 +189,13 @@ input {
   text-align: center;
   width: 80%;
 }
-.movie-duel {
+/*.duel-query {
 	margin: 0 auto;
 	position: fixed;
 	top: 300px;
 	left: 700px;
 	text-align: center;
-}
+}*/
 .duel-movie-poster img{
 	margin-top: 10px;
 	width: 100px;
@@ -259,11 +260,30 @@ footer {
   width: 100%;
   text-align: right;
 }
-
-
-
 .movie-duel-search {
-
+	border: 1px solid black;
 	float: left;
 	width: 43%;
+}
+.duel-container {
+	border: 3px solid #DDDDDD;
+	border-radius: 6px;
+	float: left;
+	font-size: 1em;
+	width: 40%;
+	margin: 10px;
+	text-align: center;
+}
+.duel-movie-title {
+	font-size: 1em;
+	font-weight: bold;
+	margin: 10px 20px;
+
+}
+.duel-movie-poster img {
+	height: 100px;
+	width: 75px;
+}
+.score {
+	margin: 5px;
 }

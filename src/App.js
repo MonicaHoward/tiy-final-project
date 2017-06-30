@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // COMPONENTS
 import MovieSearch from './MovieSearch.js';
-import MovieDuel from './MovieDuel.js'
-import Footer from './Footer.js';
+import LetsDuel from './LetsDuel.js'
+
 // CSS & EXTRAS
 import './App.css';
 
@@ -26,11 +26,11 @@ class App extends Component {
             </Link>
           </nav>
 
-          <Route path="/movie-duel-new" component={MovieDuel} />
+          <Route path="/movie-duel-new" component={LetsDuel} />
 
           <Route path="/movie-search" exact component={MovieSearch} />
 
-          <Route path="/" component={ Footer } />
+
 
         </div>
       </Router>

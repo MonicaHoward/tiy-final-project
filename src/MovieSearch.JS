@@ -13,9 +13,6 @@ class MovieSearch extends React.Component {
     }
   }
 
-  componentDidMount() {
-
-  }
 
 
   handleChange(evt) {
@@ -62,8 +59,9 @@ class MovieSearch extends React.Component {
             </div>
 
             <div className="movie-info">
-              <li className="movie-title">{movie.title.slice(0, 17) + '...'}</li>
-              <li className="rating">Movie Rating: {movie.vote_average}</li>
+              <li className="movie-title">{movie.title.slice(0, 17)}</li>
+              <li className="rating"
+                  >Movie Rating: {movie.vote_average}</li>
               <li>Synopsis: {movie.overview.slice(0, 100) + '...'}</li>
             </div>
 
