@@ -117,6 +117,7 @@ input {
 .movie-title {
 	font-size: 2em;
 	font-weight: bold;
+	line-height: 1;
 }
 .movie-poster {
 	float: left;
@@ -124,14 +125,26 @@ input {
 	margin: 15px;
 	width:10px;
 }
+.movie-info {
+	/*border: 2px solid orange;*/
+	float: right;
+
+	margin-right: 50px;
+	width:45%;
+
+}
+.rating {
+	border: 1px solid gray;
+}
 .movie-poster img {
 	height: 200px;
 }
-.movie-info li{
+/*.movie-info li{
 	float: right;
 	margin-right: 30px;
 	width: 300px;
-}
+	font-size: 1em;
+}*/
 
 /*SIDEBAR STUFF GOES RIGHT HERE*/
 .side-bar {

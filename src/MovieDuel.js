@@ -55,7 +55,8 @@ class MovieDuel extends React.Component {
       <div>
         <div className="movie-duel-search">
           <MovieSearch
-          {displayThis}/>
+          />
+          {displayThis}
         </div>
 
         <div className="movie-duel-search">
