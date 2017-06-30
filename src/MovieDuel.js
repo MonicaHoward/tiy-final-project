@@ -29,7 +29,7 @@ class MovieDuel extends React.Component {
         this.setState({
           allMovieData: data.results
         })
-        console.log("this should be the only ajax call, right?",data);
+
       });
     }
   }
@@ -39,7 +39,7 @@ class MovieDuel extends React.Component {
     if (this.state.allMovieData.length > 0) {
 
       displayThis = this.state.allMovieData[0]
-        console.log(`${url}${displayThis.poster_path}`);
+        
         return (
 
           <ul className="duel-container"
