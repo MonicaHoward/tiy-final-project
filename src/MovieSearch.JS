@@ -8,7 +8,6 @@ class MovieSearch extends React.Component {
     super();
     this.state = {
       allMovieData: [],
-      specificMovieData: [],
       searchQuery: ''
     }
   }
@@ -40,12 +39,12 @@ class MovieSearch extends React.Component {
   }
 
   render() {
-    console.log('whats my data???????', this.state.allMovieData)
+
     let displayThis;
     if (this.state.allMovieData.length > 0) {
 
       displayThis = this.state.allMovieData.map((movie) => {
-        console.log(`${url}${movie.poster_path}`);
+        
         return (
 
           <ul className="search-results" key={movie.id}>
