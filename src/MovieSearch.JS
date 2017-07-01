@@ -34,7 +34,7 @@ class MovieSearch extends React.Component {
         this.setState({
           allMovieData: data.results
         })
-  
+
       });
     }
   }

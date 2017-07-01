@@ -39,7 +39,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Route path="/movie-duel" component={TheLeftQuery } />
-// <Route path="/movie-duel" component={ RightQuery} />
-// <Route path="/movie-duel-2" component={MovieDuel} />
