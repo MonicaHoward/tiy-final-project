@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import MovieSearch from '.MovieSearch.js';
+import MovieSearch from './MovieSearch.js';
 import LetsDuel from './LetsDuel.js';
 
 // CSS & EXTRAS
